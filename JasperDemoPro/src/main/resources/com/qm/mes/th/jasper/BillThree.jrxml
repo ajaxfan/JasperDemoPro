@@ -1,0 +1,534 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="BillThree" language="groovy" pageWidth="595" pageHeight="842" columnWidth="555" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="6a5f0cd4-142a-4ef7-a071-c6349a1efeeb">
+	<property name="ireport.zoom" value="1.0"/>
+	<property name="ireport.x" value="0"/>
+	<property name="ireport.y" value="0"/>
+	<field name="billName" class="java.lang.String"/>
+	<field name="billNo" class="java.lang.String"/>
+	<field name="receivableCard" class="java.lang.String"/>
+	<field name="receiveCard" class="java.lang.String"/>
+	<field name="passCar" class="java.lang.String"/>
+	<field name="noCard" class="java.lang.String"/>
+	<field name="arrears" class="java.lang.String"/>
+	<field name="totalFare" class="java.lang.String"/>
+	<field name="receivableInvalid" class="java.lang.String"/>
+	<field name="receiveInvalid" class="java.lang.String"/>
+	<field name="invalidCard" class="java.lang.String"/>
+	<field name="militaryVehicle" class="java.lang.String"/>
+	<field name="freeCar" class="java.lang.String"/>
+	<field name="ucrossCar" class="java.lang.String"/>
+	<field name="manageCar" class="java.lang.String"/>
+	<field name="harvester" class="java.lang.String"/>
+	<field name="urgentCar" class="java.lang.String"/>
+	<field name="billCount" class="java.lang.String"/>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<pageHeader>
+		<band height="32" splitType="Stretch">
+			<staticText>
+				<reportElement uuid="8ab225f0-510e-4950-8a33-61ae1fc81627" x="0" y="0" width="555" height="28"/>
+				<textElement textAlignment="Center" verticalAlignment="Top">
+					<font fontName="宋体" size="22" isBold="true"/>
+				</textElement>
+				<text><![CDATA[票据三联单]]></text>
+			</staticText>
+			<textField pattern="yyyy-MM-dd HH:mm">
+				<reportElement uuid="588796d8-63f1-4798-9039-c1d21521fc29" x="452" y="12" width="100" height="20"/>
+				<textElement textAlignment="Right" verticalAlignment="Bottom"/>
+				<textFieldExpression><![CDATA[new java.util.Date()]]></textFieldExpression>
+			</textField>
+		</band>
+	</pageHeader>
+	<detail>
+		<band height="256" splitType="Stretch">
+			<rectangle>
+				<reportElement uuid="486b494a-348c-41ed-a676-23ac5add5da1" x="3" y="7" width="550" height="240"/>
+			</rectangle>
+			<staticText>
+				<reportElement uuid="3f3a2765-60f9-49a1-902f-4f7e45ecb1d0" x="3" y="7" width="100" height="30"/>
+				<box leftPadding="10">
+					<bottomPen lineWidth="1.0"/>
+					<rightPen lineWidth="1.0"/>
+				</box>
+				<textElement textAlignment="Justified" verticalAlignment="Middle">
+					<font fontName="宋体" size="13" isBold="true"/>
+				</textElement>
+				<text><![CDATA[名称]]></text>
+			</staticText>
+			<staticText>
+				<reportElement uuid="1a7702f4-c997-40cb-9074-17022fd39735" x="3" y="37" width="100" height="30"/>
+				<box leftPadding="10">
+					<bottomPen lineWidth="1.0"/>
+					<rightPen lineWidth="1.0"/>
+				</box>
+				<textElement textAlignment="Justified" verticalAlignment="Middle">
+					<font fontName="宋体" size="13" isBold="true"/>
+				</textElement>
+				<text><![CDATA[打印票据]]></text>
+			</staticText>
+			<staticText>
+				<reportElement uuid="9f3e6e03-99f3-4230-a5fc-c94550a899a2" x="3" y="67" width="100" height="30"/>
+				<box leftPadding="10">
+					<bottomPen lineWidth="1.0"/>
+					<rightPen lineWidth="1.0"/>
+				</box>
+				<textElement textAlignment="Justified" verticalAlignment="Middle">
+					<font fontName="宋体" size="13" isBold="true"/>
+				</textElement>
+				<text><![CDATA[应收卡]]></text>
+			</staticText>
+			<staticText>
+				<reportElement uuid="4c2ee56b-2e6c-4590-b9a5-d2303672ad97" x="3" y="97" width="100" height="30"/>
+				<box leftPadding="10">
+					<bottomPen lineWidth="1.0"/>
+					<rightPen lineWidth="1.0"/>
+				</box>
+				<textElement textAlignment="Justified" verticalAlignment="Middle">
+					<font fontName="宋体" size="13" isBold="true"/>
+				</textElement>
+				<text><![CDATA[实收卡]]></text>
+			</staticText>
+			<staticText>
+				<reportElement uuid="e369502a-602c-404e-9664-90cf24d30f85" x="3" y="127" width="100" height="30"/>
+				<box leftPadding="10">
+					<bottomPen lineWidth="1.0"/>
+					<rightPen lineWidth="1.0"/>
+				</box>
+				<textElement textAlignment="Justified" verticalAlignment="Middle">
+					<font fontName="宋体" size="13" isBold="true"/>
+				</textElement>
+				<text><![CDATA[闯关]]></text>
+			</staticText>
+			<staticText>
+				<reportElement uuid="edaeca0a-2089-4042-8ce6-95231f0b114e" x="3" y="157" width="100" height="30"/>
+				<box leftPadding="10">
+					<bottomPen lineWidth="1.0"/>
+					<rightPen lineWidth="1.0"/>
+				</box>
+				<textElement textAlignment="Justified" verticalAlignment="Middle">
+					<font fontName="宋体" size="13" isBold="true"/>
+				</textElement>
+				<text><![CDATA[无卡]]></text>
+			</staticText>
+			<staticText>
+				<reportElement uuid="31292716-363d-460e-a17d-9231a97fe55e" x="3" y="187" width="100" height="30"/>
+				<box leftPadding="10">
+					<bottomPen lineWidth="1.0"/>
+					<rightPen lineWidth="1.0"/>
+				</box>
+				<textElement textAlignment="Justified" verticalAlignment="Middle">
+					<font fontName="宋体" size="13" isBold="true"/>
+				</textElement>
+				<text><![CDATA[欠费数]]></text>
+			</staticText>
+			<staticText>
+				<reportElement uuid="5d891eef-414f-4164-9f7f-edaf9ffd2932" x="3" y="217" width="100" height="30"/>
+				<box leftPadding="10">
+					<bottomPen lineWidth="1.0"/>
+					<rightPen lineWidth="1.0"/>
+				</box>
+				<textElement textAlignment="Justified" verticalAlignment="Middle">
+					<font fontName="宋体" size="13" isBold="true"/>
+				</textElement>
+				<text><![CDATA[金额]]></text>
+			</staticText>
+			<textField isBlankWhenNull="true">
+				<reportElement uuid="a91536c0-d70e-4193-8769-fccf0246a159" x="103" y="7" width="350" height="30"/>
+				<box leftPadding="5">
+					<bottomPen lineWidth="1.0"/>
+					<rightPen lineWidth="1.0"/>
+				</box>
+				<textElement textAlignment="Justified" verticalAlignment="Middle" markup="none">
+					<font fontName="宋体" size="11" isBold="false"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{billName}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement uuid="52cf97c5-a80c-40a1-b00f-8c9b9025f1ef" x="453" y="7" width="100" height="30"/>
+				<box leftPadding="0">
+					<bottomPen lineWidth="1.0"/>
+					<rightPen lineWidth="0.0"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="宋体" size="13" isBold="true"/>
+				</textElement>
+				<text><![CDATA[张数]]></text>
+			</staticText>
+			<line>
+				<reportElement uuid="1cce584b-0df1-4c63-8c53-4e005c377ff3" x="0" y="255" width="553" height="1"/>
+				<graphicElement>
+					<pen lineWidth="2.0" lineStyle="Dashed"/>
+				</graphicElement>
+			</line>
+			<textField isBlankWhenNull="true">
+				<reportElement uuid="2eeed761-fc24-413e-8bc3-d28a945b730e" x="103" y="37" width="350" height="30"/>
+				<box leftPadding="5">
+					<bottomPen lineWidth="1.0"/>
+					<rightPen lineWidth="1.0"/>
+				</box>
+				<textElement textAlignment="Justified" verticalAlignment="Middle" markup="none">
+					<font fontName="宋体" size="11" isBold="false"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{billNo}]]></textFieldExpression>
+			</textField>
+			<textField isBlankWhenNull="true">
+				<reportElement uuid="dc3122c8-255f-44d8-88b0-b5829ee3bc55" x="453" y="67" width="100" height="30"/>
+				<box>
+					<bottomPen lineWidth="1.0"/>
+					<rightPen lineWidth="1.0"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle" markup="none">
+					<font fontName="宋体" size="13" isBold="true"/>
+				</textElement>
+			</textField>
+			<textField isBlankWhenNull="true">
+				<reportElement uuid="d368d4ca-b418-469a-be4b-ab9175aeec69" x="453" y="37" width="100" height="30"/>
+				<box rightPadding="5">
+					<bottomPen lineWidth="1.0"/>
+					<rightPen lineWidth="1.0"/>
+				</box>
+				<textElement textAlignment="Right" verticalAlignment="Middle" markup="none">
+					<font fontName="宋体" size="11" isBold="false"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{billCount}]]></textFieldExpression>
+			</textField>
+			<textField isBlankWhenNull="true">
+				<reportElement uuid="81d0d53c-e5fb-4c70-bbbd-08705fff43f4" x="453" y="97" width="100" height="30"/>
+				<box>
+					<bottomPen lineWidth="1.0"/>
+					<rightPen lineWidth="1.0"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle" markup="none">
+					<font fontName="宋体" size="13" isBold="true"/>
+				</textElement>
+			</textField>
+			<textField isBlankWhenNull="true">
+				<reportElement uuid="ec96ab12-b2ba-4d6c-9cda-ef8f2c9246d8" x="453" y="127" width="100" height="30"/>
+				<box>
+					<bottomPen lineWidth="1.0"/>
+					<rightPen lineWidth="1.0"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle" markup="none">
+					<font fontName="宋体" size="13" isBold="true"/>
+				</textElement>
+			</textField>
+			<textField isBlankWhenNull="true">
+				<reportElement uuid="70c794fd-e0ae-42ca-b5bd-83661a4a270f" x="453" y="157" width="100" height="30"/>
+				<box>
+					<bottomPen lineWidth="1.0"/>
+					<rightPen lineWidth="1.0"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle" markup="none">
+					<font fontName="宋体" size="13" isBold="true"/>
+				</textElement>
+			</textField>
+			<textField isBlankWhenNull="true">
+				<reportElement uuid="0ad42db9-c4c0-488c-a701-7b4a554c8593" x="453" y="187" width="100" height="30"/>
+				<box>
+					<bottomPen lineWidth="1.0"/>
+					<rightPen lineWidth="1.0"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle" markup="none">
+					<font fontName="宋体" size="13" isBold="true"/>
+				</textElement>
+			</textField>
+			<textField isBlankWhenNull="true">
+				<reportElement uuid="5bf20613-5677-4367-9419-8d10814e86ac" x="103" y="67" width="70" height="30"/>
+				<box leftPadding="0" rightPadding="2">
+					<bottomPen lineWidth="1.0"/>
+					<rightPen lineWidth="1.0"/>
+				</box>
+				<textElement textAlignment="Right" verticalAlignment="Middle" markup="none">
+					<font fontName="宋体" size="11" isBold="false"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{receivableCard}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement uuid="a5d44d61-541b-4047-ba71-d0b10726f242" x="173" y="67" width="70" height="30"/>
+				<box leftPadding="10">
+					<bottomPen lineWidth="1.0"/>
+					<rightPen lineWidth="1.0"/>
+				</box>
+				<textElement textAlignment="Justified" verticalAlignment="Middle">
+					<font fontName="宋体" size="13" isBold="true"/>
+				</textElement>
+				<text><![CDATA[应交废票]]></text>
+			</staticText>
+			<textField isBlankWhenNull="true">
+				<reportElement uuid="3e889e39-92ec-4373-861e-1b2db7ce61c5" x="243" y="67" width="70" height="30"/>
+				<box leftPadding="0" rightPadding="2">
+					<bottomPen lineWidth="1.0"/>
+					<rightPen lineWidth="1.0"/>
+				</box>
+				<textElement textAlignment="Right" verticalAlignment="Middle" markup="none">
+					<font fontName="宋体" size="11" isBold="false"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{receivableInvalid}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement uuid="241b88eb-9eb8-4491-93f4-6d3c30e1c98c" x="313" y="67" width="70" height="30"/>
+				<box leftPadding="10">
+					<bottomPen lineWidth="1.0"/>
+					<rightPen lineWidth="1.0"/>
+				</box>
+				<textElement textAlignment="Justified" verticalAlignment="Middle">
+					<font fontName="宋体" size="13" isBold="true"/>
+				</textElement>
+				<text><![CDATA[U0]]></text>
+			</staticText>
+			<textField isBlankWhenNull="true">
+				<reportElement uuid="3f992c92-c1f4-4af3-aed4-8f8d703455b0" x="383" y="67" width="70" height="30"/>
+				<box leftPadding="0" rightPadding="2">
+					<bottomPen lineWidth="1.0"/>
+					<rightPen lineWidth="1.0"/>
+				</box>
+				<textElement textAlignment="Right" verticalAlignment="Middle" markup="none">
+					<font fontName="宋体" size="11" isBold="false"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{ucrossCar}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement uuid="7796480c-9937-486e-9524-0666097e026f" x="313" y="97" width="70" height="30"/>
+				<box leftPadding="10">
+					<bottomPen lineWidth="1.0"/>
+					<rightPen lineWidth="1.0"/>
+				</box>
+				<textElement textAlignment="Justified" verticalAlignment="Middle">
+					<font fontName="宋体" size="13" isBold="true"/>
+				</textElement>
+				<text><![CDATA[管理车]]></text>
+			</staticText>
+			<staticText>
+				<reportElement uuid="5bab60ce-7745-4e19-8dcf-ac9b071884f0" x="173" y="97" width="70" height="30"/>
+				<box leftPadding="10">
+					<bottomPen lineWidth="1.0"/>
+					<rightPen lineWidth="1.0"/>
+				</box>
+				<textElement textAlignment="Justified" verticalAlignment="Middle">
+					<font fontName="宋体" size="13" isBold="true"/>
+				</textElement>
+				<text><![CDATA[实交废票]]></text>
+			</staticText>
+			<textField isBlankWhenNull="true">
+				<reportElement uuid="dde823a4-48c9-4ddf-b80c-f1f0190d2a90" x="383" y="97" width="70" height="30"/>
+				<box leftPadding="0" rightPadding="2">
+					<bottomPen lineWidth="1.0"/>
+					<rightPen lineWidth="1.0"/>
+				</box>
+				<textElement textAlignment="Right" verticalAlignment="Middle" markup="none">
+					<font fontName="宋体" size="11" isBold="false"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{manageCar}]]></textFieldExpression>
+			</textField>
+			<textField isBlankWhenNull="true">
+				<reportElement uuid="8662d7e5-c2c1-435d-b023-233609b60cf4" x="103" y="97" width="70" height="30"/>
+				<box leftPadding="0" rightPadding="2">
+					<bottomPen lineWidth="1.0"/>
+					<rightPen lineWidth="1.0"/>
+				</box>
+				<textElement textAlignment="Right" verticalAlignment="Middle" markup="none">
+					<font fontName="宋体" size="11" isBold="false"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{receiveCard}]]></textFieldExpression>
+			</textField>
+			<textField isBlankWhenNull="true">
+				<reportElement uuid="d196d6cd-3420-489b-9e6a-7f6c6cfb5fdd" x="243" y="97" width="70" height="30"/>
+				<box leftPadding="0" rightPadding="2">
+					<bottomPen lineWidth="1.0"/>
+					<rightPen lineWidth="1.0"/>
+				</box>
+				<textElement textAlignment="Right" verticalAlignment="Middle" markup="none">
+					<font fontName="宋体" size="11" isBold="false"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{receiveInvalid}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement uuid="a64e996c-1160-4103-8849-e4821a46cabe" x="313" y="127" width="70" height="30"/>
+				<box leftPadding="10">
+					<bottomPen lineWidth="1.0"/>
+					<rightPen lineWidth="1.0"/>
+				</box>
+				<textElement textAlignment="Justified" verticalAlignment="Middle">
+					<font fontName="宋体" size="13" isBold="true"/>
+				</textElement>
+				<text><![CDATA[收割机]]></text>
+			</staticText>
+			<staticText>
+				<reportElement uuid="08612ae2-6ded-4c36-be0f-7f5fa4245b6a" x="173" y="127" width="70" height="30"/>
+				<box leftPadding="10">
+					<bottomPen lineWidth="1.0"/>
+					<rightPen lineWidth="1.0"/>
+				</box>
+				<textElement textAlignment="Justified" verticalAlignment="Middle">
+					<font fontName="宋体" size="13" isBold="true"/>
+				</textElement>
+				<text><![CDATA[坏卡张数]]></text>
+			</staticText>
+			<textField isBlankWhenNull="true">
+				<reportElement uuid="b1087184-675e-409d-a2f7-14891b1ed308" x="243" y="127" width="70" height="30"/>
+				<box leftPadding="0" rightPadding="2">
+					<bottomPen lineWidth="1.0"/>
+					<rightPen lineWidth="1.0"/>
+				</box>
+				<textElement textAlignment="Right" verticalAlignment="Middle" markup="none">
+					<font fontName="宋体" size="11" isBold="false"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{invalidCard}]]></textFieldExpression>
+			</textField>
+			<textField isBlankWhenNull="true">
+				<reportElement uuid="40a8f461-88be-4dcc-b1b3-491820955b05" x="103" y="127" width="70" height="30"/>
+				<box leftPadding="0" rightPadding="2">
+					<bottomPen lineWidth="1.0"/>
+					<rightPen lineWidth="1.0"/>
+				</box>
+				<textElement textAlignment="Right" verticalAlignment="Middle" markup="none">
+					<font fontName="宋体" size="11" isBold="false"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{passCar}]]></textFieldExpression>
+			</textField>
+			<textField isBlankWhenNull="true">
+				<reportElement uuid="7e424923-5c6d-499e-9fc9-4f3b6e747bd2" x="383" y="127" width="70" height="30"/>
+				<box leftPadding="0" rightPadding="2">
+					<bottomPen lineWidth="1.0"/>
+					<rightPen lineWidth="1.0"/>
+				</box>
+				<textElement textAlignment="Right" verticalAlignment="Middle" markup="none">
+					<font fontName="宋体" size="11" isBold="false"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{harvester}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement uuid="bba72b21-5f1e-453e-9877-f0490f10a736" x="313" y="157" width="70" height="30"/>
+				<box leftPadding="10">
+					<bottomPen lineWidth="1.0"/>
+					<rightPen lineWidth="1.0"/>
+				</box>
+				<textElement textAlignment="Justified" verticalAlignment="Middle">
+					<font fontName="宋体" size="13" isBold="true"/>
+				</textElement>
+				<text><![CDATA[紧急数]]></text>
+			</staticText>
+			<staticText>
+				<reportElement uuid="c2f569d8-5036-4f56-a4c1-7a6e3424079a" x="173" y="157" width="70" height="30"/>
+				<box leftPadding="10">
+					<bottomPen lineWidth="1.0"/>
+					<rightPen lineWidth="1.0"/>
+				</box>
+				<textElement textAlignment="Justified" verticalAlignment="Middle">
+					<font fontName="宋体" size="13" isBold="true"/>
+				</textElement>
+				<text><![CDATA[军车]]></text>
+			</staticText>
+			<textField isBlankWhenNull="true">
+				<reportElement uuid="d73a987b-d6f6-489d-8167-9f38afb44a96" x="243" y="157" width="70" height="30"/>
+				<box leftPadding="0" rightPadding="2">
+					<bottomPen lineWidth="1.0"/>
+					<rightPen lineWidth="1.0"/>
+				</box>
+				<textElement textAlignment="Right" verticalAlignment="Middle" markup="none">
+					<font fontName="宋体" size="11" isBold="false"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{militaryVehicle}]]></textFieldExpression>
+			</textField>
+			<textField isBlankWhenNull="true">
+				<reportElement uuid="27019f73-e04d-4afe-9b8f-efedafb4f192" x="103" y="157" width="70" height="30"/>
+				<box leftPadding="0" rightPadding="2">
+					<bottomPen lineWidth="1.0"/>
+					<rightPen lineWidth="1.0"/>
+				</box>
+				<textElement textAlignment="Right" verticalAlignment="Middle" markup="none">
+					<font fontName="宋体" size="11" isBold="false"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{noCard}]]></textFieldExpression>
+			</textField>
+			<textField isBlankWhenNull="true">
+				<reportElement uuid="dec8fc5f-6453-4dc8-9254-cfc74e10bcce" x="383" y="157" width="70" height="30"/>
+				<box leftPadding="0" rightPadding="2">
+					<bottomPen lineWidth="1.0"/>
+					<rightPen lineWidth="1.0"/>
+				</box>
+				<textElement textAlignment="Right" verticalAlignment="Middle" markup="none">
+					<font fontName="宋体" size="11" isBold="false"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{urgentCar}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement uuid="7e294289-52c2-4602-91bc-49f132f50b45" x="313" y="187" width="70" height="30"/>
+				<box leftPadding="15">
+					<bottomPen lineWidth="1.0"/>
+					<rightPen lineWidth="1.0"/>
+				</box>
+				<textElement textAlignment="Justified" verticalAlignment="Middle">
+					<font fontName="宋体" size="13" isBold="true"/>
+				</textElement>
+				<text><![CDATA[]]></text>
+			</staticText>
+			<staticText>
+				<reportElement uuid="ccafd55c-4870-401a-8668-4c975638a9b7" x="173" y="187" width="70" height="30"/>
+				<box leftPadding="10">
+					<bottomPen lineWidth="1.0"/>
+					<rightPen lineWidth="1.0"/>
+				</box>
+				<textElement textAlignment="Justified" verticalAlignment="Middle">
+					<font fontName="宋体" size="13" isBold="true"/>
+				</textElement>
+				<text><![CDATA[免费车]]></text>
+			</staticText>
+			<textField isBlankWhenNull="true">
+				<reportElement uuid="9280923a-429c-4340-8631-54378926e710" x="243" y="187" width="70" height="30"/>
+				<box leftPadding="0" rightPadding="2">
+					<bottomPen lineWidth="1.0"/>
+					<rightPen lineWidth="1.0"/>
+				</box>
+				<textElement textAlignment="Right" verticalAlignment="Middle" markup="none">
+					<font fontName="宋体" size="11" isBold="false"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{freeCar}]]></textFieldExpression>
+			</textField>
+			<textField isBlankWhenNull="true">
+				<reportElement uuid="34207359-6d84-469a-a4bd-5a4dbb2ebc50" x="103" y="187" width="70" height="30"/>
+				<box leftPadding="0" rightPadding="2">
+					<bottomPen lineWidth="1.0"/>
+					<rightPen lineWidth="1.0"/>
+				</box>
+				<textElement textAlignment="Right" verticalAlignment="Middle" markup="none">
+					<font fontName="宋体" size="11" isBold="false"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{arrears}]]></textFieldExpression>
+			</textField>
+			<textField isBlankWhenNull="true">
+				<reportElement uuid="988c6672-d613-4a02-9dca-a0111910e7ec" x="383" y="187" width="70" height="30"/>
+				<box>
+					<bottomPen lineWidth="1.0"/>
+					<rightPen lineWidth="1.0"/>
+				</box>
+				<textElement textAlignment="Justified" verticalAlignment="Middle" markup="none">
+					<font fontName="宋体" size="13" isBold="true"/>
+				</textElement>
+			</textField>
+			<textField isBlankWhenNull="true">
+				<reportElement uuid="f52d58f6-7d91-4de6-b891-80aca855f3f0" x="103" y="217" width="140" height="30"/>
+				<box leftPadding="0" rightPadding="2">
+					<bottomPen lineWidth="1.0"/>
+					<rightPen lineWidth="1.0"/>
+				</box>
+				<textElement textAlignment="Right" verticalAlignment="Middle" markup="none">
+					<font fontName="宋体" size="11" isBold="false"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{totalFare}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement uuid="8ef928ed-9dcc-4f4c-aa4a-10b06b0b3ef2" x="243" y="217" width="310" height="30"/>
+				<box>
+					<bottomPen lineWidth="1.0"/>
+					<rightPen lineWidth="1.0"/>
+				</box>
+				<textElement textAlignment="Justified" verticalAlignment="Middle">
+					<font fontName="宋体" size="13" isBold="true"/>
+				</textElement>
+				<text><![CDATA[]]></text>
+			</staticText>
+		</band>
+	</detail>
+</jasperReport>
